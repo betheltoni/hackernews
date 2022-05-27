@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import TopStories from './TopStories';
+
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import LatestStories from './LatestStories';
+import BestStories from './BestStories';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hackers News Clone</h1>
+      <BrowserRouter>
+      <nav>
+        <NavLink to="/">TOP STORIES</NavLink>
+        <NavLink to="/latest">LATEST STORIES</NavLink>
+        <NavLink to="/best">BEST STORIES</NavLink>
+      </nav>
+        <Routes>
+          <Route path='/' element={<TopStories/>} />
+          <Route path='/latest' element={<LatestStories/>} />
+          <Route path='/best' element={<BestStories/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
