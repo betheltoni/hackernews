@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hackernews/static/css/main.f5fdac8b.css",
+    "main.js": "/hackernews/static/js/main.40b1ce93.js",
+    "static/js/787.550f3429.chunk.js": "/hackernews/static/js/787.550f3429.chunk.js",
+    "index.html": "/hackernews/index.html",
+    "main.f5fdac8b.css.map": "/hackernews/static/css/main.f5fdac8b.css.map",
+    "main.40b1ce93.js.map": "/hackernews/static/js/main.40b1ce93.js.map",
+    "787.550f3429.chunk.js.map": "/hackernews/static/js/787.550f3429.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5fdac8b.css",
+    "static/js/main.40b1ce93.js"
+  ]
+}
