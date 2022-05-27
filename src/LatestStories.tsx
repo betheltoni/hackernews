@@ -22,7 +22,7 @@ const LatestStories = () => {
         //   setTopStory([res.data]);
         setLatestStory(newLatestStories);
         // console.log(latestStory);
-        //   console.log(newLatestStories);
+          console.log(newLatestStories);
         }
       } catch (err:any){
         console.log(err);
