@@ -14,14 +14,14 @@ function App() {
       <h1>Hackers News Clone</h1>
       <BrowserRouter>
       <nav>
-        <NavLink to="/">TOP STORIES</NavLink>
-        <NavLink to="/latest">LATEST STORIES</NavLink>
-        <NavLink to="/best">BEST STORIES</NavLink>
+        <NavLink to="/hackernews/">TOP STORIES</NavLink>
+        <NavLink to="/hackernews/latest">LATEST STORIES</NavLink>
+        <NavLink to="/hackernews/best">BEST STORIES</NavLink>
       </nav>
         <Routes>
-          <Route path='/' element={<TopStories/>} />
-          <Route path='/latest' element={<LatestStories/>} />
-          <Route path='/best' element={<BestStories/>} />
+          <Route path='/hackernews/' element={<TopStories/>} />
+          <Route path='/hackernews/latest' element={<LatestStories/>} />
+          <Route path='/hackernews/best' element={<BestStories/>} />
         </Routes>
       </BrowserRouter>
     </div>
