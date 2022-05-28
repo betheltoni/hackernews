@@ -33,7 +33,7 @@ const LatestStories = () => {
 
   console.log(latestStory);
 
-  const renderStory = latestStory?.map((story:any, index:number) => {
+  const renderStory = latestStory.map((story:any, index:number) => {
     return(
         <NewsCard stories={story} key={index} />
     )
