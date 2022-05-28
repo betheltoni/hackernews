@@ -20,7 +20,7 @@ const BestStories = () => {
         //   console.log(res);
           newBestStories.push(res.data);
         //   setTopStory([res.data]);
-        setBestStory(newBestStories);
+        setBestStory([...newBestStories]);
         
           // console.log(newBestStories);
         }

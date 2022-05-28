@@ -20,7 +20,7 @@ const LatestStories = () => {
         //   console.log(res);
           newLatestStories.push(res.data);
         //   setTopStory([res.data]);
-        setLatestStory(newLatestStories);
+        setLatestStory([...newLatestStories]);
         
           // console.log(newLatestStories);
         }
