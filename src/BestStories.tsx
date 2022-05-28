@@ -21,8 +21,8 @@ const BestStories = () => {
           newBestStories.push(res.data);
         //   setTopStory([res.data]);
         setBestStory(newBestStories);
-        // console.log(bestStory);
-          console.log(newBestStories);
+        
+          // console.log(newBestStories);
         }
       } catch (err:any){
         console.log(err);
@@ -30,6 +30,8 @@ const BestStories = () => {
     }
     getBestStories();
   }, [])
+
+  console.log(bestStory);
 
   const renderStory = bestStory?.map((story:any, index:number) => {
     return(

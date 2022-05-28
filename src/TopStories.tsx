@@ -21,10 +21,11 @@ const TopStories = () => {
             //   console.log(res);
               newTopStories.push(res.data);
             //   setTopStory([res.data]);
-            setTopStory(newTopStories);
-            // console.log(topStory);
-              console.log(newTopStories);
+            setTopStory([...newTopStories]);
+            
+              // console.log(newTopStories);
             }
+            
           } catch (err:any){
             console.log(err);
           }
@@ -33,7 +34,9 @@ const TopStories = () => {
       }, [])
 
 
-      const renderStory = topStory?.map((story:any, index:number) => {
+      console.log(topStory);
+
+      const renderStory = topStory.map((story:any, index:number) => {
         return(
             <NewsCard stories={story} key={index} />
         )

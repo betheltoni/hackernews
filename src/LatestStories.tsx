@@ -21,8 +21,8 @@ const LatestStories = () => {
           newLatestStories.push(res.data);
         //   setTopStory([res.data]);
         setLatestStory(newLatestStories);
-        // console.log(latestStory);
-          console.log(newLatestStories);
+        
+          // console.log(newLatestStories);
         }
       } catch (err:any){
         console.log(err);
@@ -30,6 +30,8 @@ const LatestStories = () => {
     }
     getLatestStories();
   }, [])
+
+  console.log(latestStory);
 
   const renderStory = latestStory?.map((story:any, index:number) => {
     return(
