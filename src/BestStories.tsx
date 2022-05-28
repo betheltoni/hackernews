@@ -31,7 +31,7 @@ const BestStories = () => {
     getBestStories();
   }, [])
 
-  console.log(bestStory);
+  // console.log(bestStory);
 
   const renderStory = bestStory.map((story:any, index:number) => {
     return(

@@ -31,7 +31,7 @@ const LatestStories = () => {
     getLatestStories();
   }, [])
 
-  console.log(latestStory);
+  // console.log(latestStory);
 
   const renderStory = latestStory.map((story:any, index:number) => {
     return(

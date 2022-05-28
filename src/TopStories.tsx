@@ -34,7 +34,7 @@ const TopStories = () => {
       }, [])
 
 
-      console.log(topStory);
+      // console.log(topStory);
 
       const renderStory = topStory.map((story:any, index:number) => {
         return(
