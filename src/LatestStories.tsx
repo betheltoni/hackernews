@@ -4,7 +4,8 @@ import NewsCard from './NewsCard';
 
 const LatestStories = () => {
 
-  const [latestStory, setLatestStory] = useState<any>([]);
+  const [latestStory, setLatestStory] = useState<string[]>([]);
+  const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
     const getLatestStories = async () => {
@@ -21,6 +22,7 @@ const LatestStories = () => {
           newLatestStories.push(res.data);
         //   setTopStory([res.data]);
         setLatestStory([...newLatestStories]);
+        setLoading(false);
         
           // console.log(newLatestStories);
         }
@@ -40,7 +42,8 @@ const LatestStories = () => {
   })
   return (
     <div>
-       {renderStory} 
+      {loading ? (<h2>Loading stories...</h2>) : 
+      (<div>{renderStory}</div>) }
     </div>
   )
 }

@@ -4,7 +4,8 @@ import NewsCard from './NewsCard';
 
 const BestStories = () => {
 
-  const [bestStory, setBestStory] = useState<any>([]);
+  const [bestStory, setBestStory] = useState<string[]>([]);
+  const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
     const getBestStories = async () => {
@@ -21,6 +22,7 @@ const BestStories = () => {
           newBestStories.push(res.data);
         //   setTopStory([res.data]);
         setBestStory([...newBestStories]);
+        setLoading(false);
         
           // console.log(newBestStories);
         }
@@ -41,7 +43,8 @@ const BestStories = () => {
 
   return (
     <div>
-        {renderStory}
+      {loading ? (<h2>Loading stories...</h2>) : 
+      (<div>{renderStory}</div>) }
     </div>
   )
 }
