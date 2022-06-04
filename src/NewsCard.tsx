@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewsCard = (props: {stories: {title:any; by:any; time:any; kids:any; url:any}}) => {
+const NewsCard = (props: {stories: {title:string; by:string; time:number; kids:number[]; url:string}}) => {
     const {title, by, time, kids, url} = props.stories;
     // console.log(time);
     const date = new Date(time);
